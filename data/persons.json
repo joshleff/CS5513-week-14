@@ -1,30 +1,20 @@
 [
   {
     "name": "Aurelius Maximus",
-    "email": "jane@coder.com",
-    "phone": "800-456-1234",
-    "birthdate": "04/01/2020",
+    "age": "74",
+    "bio": "This captain knows all the shortcuts, tricks, and methods to gain an advantage and win the race",
     "id": 1
   },
   {
     "name": "Manitoba Merriweather",
-    "email": "data@person.com",
-    "phone": "800-123-4567",
-    "birthdate": "01/02/2001",
+    "age": "46",
+    "bio": "Manitoba couldn't tell you, just how long it's been, but it's time for him to be back, back amongst the greats, competing for what he knows is his to win and be back on top again.",
     "id": 2
   },
   {
-    "name": "George Foreman",
-    "email": "george@scripter.com",
-    "phone": "800-876-3090",
-    "birthdate": "12/01/2010",
+    "name": "Lars Windream",
+    "age": "19",
+    "bio": "Lars has a dream, and that is to come home with the glory and the fame and the riches, so that everyone knows, he is the greatest captain of the fastest ship in the galaxy",
     "id": 3
-  },
-  {
-    "name": "Next After",
-    "email": "adam@gardenofeden.org",
-    "phone": "123-456-7800",
-    "birthdate": "01/01/0001",
-    "id": 4
   }
 ]

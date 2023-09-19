@@ -20,12 +20,11 @@ export async function getStaticPaths() {
 export default function Entry( { itemData } ) {
     return (
         <>
-            <article className="card col-6 align-self-center mt-5">
+            <article className="card text-center mt-5">
                 <div className="card-body">
-                    <h5 className="card-title">{itemData.name}</h5>
-                    <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.phone}</h6>
-                    <p className="card-text">{itemData.birthdate}</p>
-                    <a href="#" className="card-link">{itemData.email}</a>
+                    <h5 className="card-title m-4">{itemData.name}</h5>
+                    <h6 className="card-subtitle mb-2 text-body-secondary m-4">Age: {itemData.age}</h6>
+                    <p className="card-text m-4">{itemData.bio}</p>
                 </div>
             </article>
         </>
