@@ -1,48 +1,33 @@
 
 import Link from 'next/link';
-import { getSortedList, getSortedList2 } from '../lib/data';
+import { getSortedList } from '@/lib/data';
 
 export async function getStaticProps() {
-    const allData = getSortedList();
-    const allData2 = getSortedList2()
+    const allData = await getSortedList();
     return {
         props: {
-            allData,
-            allData2
+            allData
         }
     };
 }
 
-export default function Home ( { allData, allData2 } ) {
+export default function Home ( { allData } ) {
     return (
             <div className="container-fluid">
-                <h1 className="text-center m-5 ">The Captains</h1>
+                <h1 className="text-center m-5 ">Basic Headless CMS App</h1>
 
-                <div className="list-group mt-4 text-center">
-                    {allData.map(
+                <div className="list-group mt-5 text-center">
+                    {allData
+                        .sort((a, b) => a.id > b.id ? 1 : -1 )
+                        .map(
                         ({id, name}) => (
-                            <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action">
+                            <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action w-50 mx-auto">
                                 {name}
                             </Link>
                         )
                     )
                     }
                 </div>
-
-                <h1 className="text-center m-5">The Ships</h1>
-
-                <div className="list-group mt-4 text-center">
-                    {allData2.map(
-                        ({id, name}) => (
-                            <Link key={id} href={`/boats/${id}`} className="list-group-item list-group-item-action">
-                                {name}
-                            </Link>
-                        )
-                    )
-                    }
-                </div>
-
-
 
             </div>
     )

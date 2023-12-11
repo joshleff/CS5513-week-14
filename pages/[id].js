@@ -10,7 +10,7 @@ export async function getStaticProps( { params } ) {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllIds();
+    const paths = await getAllIds();
     return {
         paths,
         fallback: false
@@ -22,9 +22,10 @@ export default function Entry( { itemData } ) {
         <>
             <article className="card text-center mt-5">
                 <div className="card-body">
-                    <h5 className="card-title m-4">{itemData.name}</h5>
-                    <h6 className="card-subtitle mb-2 text-body-secondary m-4">Age: {itemData.age}</h6>
-                    <p className="card-text m-4">{itemData.bio}</p>
+                    <h1 className="card-title m-4">{itemData.post_title}</h1>
+                    <h6 className="card-title m-2">{itemData.post_date}</h6>
+                    <p className="card-text mt-5 w-50 mx-auto">{itemData.post_content.replace( /(<([^>]+)>)/ig, '')}</p>
+
                 </div>
             </article>
         </>
