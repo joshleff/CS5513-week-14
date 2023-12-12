@@ -1,4 +1,4 @@
-import { getAllIds, getData } from '../lib/data';
+import { getAllIds, getData } from '@/lib/data';
 
 export async function getStaticProps( { params } ) {
     const itemData = await getData(params.id);
@@ -23,7 +23,8 @@ export default function Entry( { itemData } ) {
             <article className="card text-center mt-5">
                 <div className="card-body">
                     <h1 className="card-title m-4">{itemData.post_title}</h1>
-                    <h6 className="card-title m-2">{itemData.post_date}</h6>
+                    <h6 className="card-title m-4">{itemData.post_date}</h6>
+                    <h6 className="card-title m-4">{itemData.name}</h6>
                     <p className="card-text mt-5 w-50 mx-auto">{itemData.post_content.replace( /(<([^>]+)>)/ig, '')}</p>
 
                 </div>
