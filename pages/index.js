@@ -1,35 +1,25 @@
 
 import Link from 'next/link';
-import { getSortedList } from '@/lib/data';
 
-export async function getStaticProps() {
-    const allData = await getSortedList();
-    return {
-        props: {
-            allData
-        }
-    };
-}
+
 
 export default function Home ( { allData } ) {
     return (
-            <div className="container-fluid">
-                <h1 className="text-center m-5 ">Basic Headless CMS App</h1>
-
-                <div className="list-group mt-5 text-center">
-                    {allData
-                        .sort((a, b) => a.id > b.id ? 1 : -1 )
-                        .map(
-                        ({id, name}) => (
-                            <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action w-50 mx-auto">
-                                {name}
-                            </Link>
-                        )
-                    )
-                    }
-                </div>
-
+        <div className="container-fluid d-flex flex-column align-items-center justify-content-around">
+            <h1 className="text-center m-5 ">FINAL HEADLESS CMS APP</h1>
+            <div>
+                Welcome to the final iteration of the Full Stack CMS App.</div>
+            <div> Please use the navbar links to find your way around.
             </div>
+            <div className="mt-5 ">
+                &emsp;／l、<br />
+                （ﾟ､ ｡ ７<br />
+                &emsp;l、~ ヽ<br />
+                &emsp;ししと ）ノ
+            </div>
+
+
+        </div>
     )
 
 }
