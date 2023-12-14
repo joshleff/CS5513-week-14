@@ -1,9 +1,5 @@
 
-import Link from 'next/link';
-
-
-
-export default function Home ( { allData } ) {
+export default function Home () {
     return (
         <div className="container-fluid d-flex flex-column align-items-center justify-content-around">
             <h1 className="text-center m-5 ">FINAL HEADLESS CMS APP</h1>
